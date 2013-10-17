@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CircularListViewSample</string>
+    <string name="menu_circler">Circler</string>
+    <string name="menu_align_left">LeftAlign</string>
+    <string name="menu_align_right">RightAlign</string>
+
+</resources>

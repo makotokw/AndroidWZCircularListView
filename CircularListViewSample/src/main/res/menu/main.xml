@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/align_left"
+        android:title="@string/menu_align_left"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/circler"
+        android:title="@string/menu_circler"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/align_right"
+        android:title="@string/menu_align_right"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>

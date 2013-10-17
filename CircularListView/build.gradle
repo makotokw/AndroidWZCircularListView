@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+    }
+}
+apply plugin: 'android-library'
+
+repositories {
+    mavenCentral()
+}
+
+def projectName = 'android-wzcircularlistview'
+def projectVersion = '0.1-SNAPSHOT'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 7
+    }
+}
+
+dependencies {
+}
+
+task renamePackageReleaseJar(type : Copy, dependsOn : 'packageReleaseJar') {
+    from 'build/bundles/release/classes.jar'
+    into "build/libs"
+    rename { "${projectName}-${projectVersion}.jar" }
+}
