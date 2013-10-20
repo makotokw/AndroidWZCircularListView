@@ -3,6 +3,9 @@ WZCircularListView for Android
 
 The Circular ListView for Android.
 
+[![](https://dl.dropboxusercontent.com/u/8932138/screenshot/AndroidWZCircularListView/1-thumb.png)](https://dl.dropboxusercontent.com/u/8932138/screenshot/AndroidWZCircularListView/1.png)
+[![](https://dl.dropboxusercontent.com/u/8932138/screenshot/AndroidWZCircularListView/2-thumb.png)](https://dl.dropboxusercontent.com/u/8932138/screenshot/AndroidWZCircularListView/2.png)
+
 iOS Version: [CocoaWZCircularTableView](https://github.com/makotokw/CocoaWZCircularTableView)
 
 ## Build jar
