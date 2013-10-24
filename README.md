@@ -12,6 +12,7 @@ iOS Version: [CocoaWZCircularTableView](https://github.com/makotokw/CocoaWZCircu
 
 ```bash
 ./gradlew renamePackageReleaseJar
+open CircularListView/build/libs
 ```
 
 Copy ``CircularListView/build/libs/android-wzcircularlistview.jar`` to your project.

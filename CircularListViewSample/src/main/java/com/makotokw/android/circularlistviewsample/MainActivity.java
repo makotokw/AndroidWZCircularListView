@@ -1,9 +1,11 @@
 package com.makotokw.android.circularlistviewsample;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Display;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,24 +42,28 @@ public class MainActivity extends Activity {
             @Override
             public void onCircularLayoutFinished(CircularListView circularListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
 
-                if (mIsAdapterDirty) {
-                    circularListView.scrollFirstItemToCenter();
-                    mIsAdapterDirty = false;
-                }
-
-                TextView centerView = (TextView) circularListView.getCentralChild();
-
-                if (centerView != null) {
-                    centerView.setTextColor(getResources().getColor(R.color.center_text));
-                }
-                for (int i = 0; i < circularListView.getChildCount(); i++) {
-                    TextView view = (TextView) circularListView.getChildAt(i);
-                    if (view != null && view != centerView) {
-                        view.setTextColor(getResources().getColor(R.color.default_text));
-                    }
-                }
+                refreshCircular();
             }
         });
+    }
+
+    void refreshCircular() {
+        if (mIsAdapterDirty) {
+            mCircularListView.scrollFirstItemToCenter();
+            mIsAdapterDirty = false;
+        }
+
+        TextView centerView = (TextView) mCircularListView.getCentralChild();
+
+        if (centerView != null) {
+            centerView.setTextColor(getResources().getColor(R.color.center_text));
+        }
+        for (int i = 0; i < mCircularListView.getChildCount(); i++) {
+            TextView view = (TextView) mCircularListView.getChildAt(i);
+            if (view != null && view != centerView) {
+                view.setTextColor(getResources().getColor(R.color.default_text));
+            }
+        }
     }
 
     @Override
